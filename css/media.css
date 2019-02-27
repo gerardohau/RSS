@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.formulario{
+    margin-top: 5em;
+    margin-left: 5em;
+}
+.botones{
+    margin-top: 1em;
+    margin-left: 5em;
+
+}
+
+.links{
+    margin-left: 1em;
+}
+
+.tituloIndex{
+
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+
+#mostrar-sugerencias{
+    height: auto;
+    position: absolute;
+    z-index: 9999;
+    margin-top: -1%;
+    margin-left: -2.2%;
+   
+}
+
+.suggest-element{
+    background-color : #EEEEEE;
+    border-top : 1px solid #d6d4d4;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float:left;
+    font-size: .8rem;
+    
+}
+
+a {
+    overflow: hidden;
+}
+
+#contenido{
+    margin-bottom: 25px;
+}
+
+.seleccionados{
+    margin-left: 5em;
+    
+}
+
+.results{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    
+}
+.indicenum,.botonExcel,.creaExcel,.btnRegresar{
+
+    margin-left: 5em;
+    margin-top: 2em;
+
+}
