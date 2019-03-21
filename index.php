@@ -21,16 +21,34 @@ function indexar() {
     $datos2 = $conn->query($sql2);
 
 
+    echo "<div class='container'> <section class='col-xs-12 col-sm-6 col-md-12'>
+    <article class='search-result row'>";
+
 
     while ($user = mysqli_fetch_array($datos2)) {
 
         $titulo = " " . $user['titulo'];
         $link = $user['link'];
         $ide = $user['id'];
+        $descripcion=$user['descripcion'] . "..";
         
 
-        echo "<input type='checkbox' class='seleccionados' value='$ide'>" . "<a class='links' href='$link'>$titulo</a>" . "<br>";
+        echo "<div class='col-xs-12 col-sm-12 col-md-3'>
+        <a href='#' title='Lorem ipsum' class='thumbnail'><img src='http://lorempixel.com/250/140/people' alt='Lorem ipsum' /></a></div>
+        <div class='col-xs-12 col-sm-12 col-md-2'>
+        <ul class='meta-search'>
+            <li><i class='glyphicon glyphicon-calendar'></i> <span>02/15/2014</span></li>
+        </ul>
+        </div> 
+        <div class='col-xs-12 col-sm-12 col-md-7 excerpet'>
+				<h3><a href='$link' title=''>$titulo</a></h3>
+				<p text-overflow: ellipsis;>$descripcion </p>						
+                <span class='plus'><input type='checkbox' class='seleccionados' value='$ide'></a></span>
+        </div>
+        <span class='clearfix borda'></span>";
     }
+
+    echo "</section></div>";
 
 
 
@@ -98,7 +116,9 @@ function ordenarFecha(){
     <head>
         <meta charset="UTF-8">
         <link href="css/media.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <title>Feed</title>
     </head>
     <body>
