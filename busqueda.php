@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $fecha=$user['fecha'];
         
                     echo "<div class='col-xs-12 col-sm-12 col-md-3'>
-                    <a href='#' title='Lorem ipsum' class='thumbnail'><img src='http://lorempixel.com/250/140/people' alt='Lorem ipsum' /></a></div>
+                    <a href='#' class='thumbnail'><img src='http://lorempixel.com/250/140/people' /></a></div>
                     <div class='col-xs-12 col-sm-12 col-md-2'>
                     <ul class='meta-search'>
                     <li><i class='glyphicon glyphicon-calendar'></i> <span>$fecha</span></li>
@@ -65,7 +65,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo"<span id='error2'>No se encontró ninguna coincidencia</span><br>";
             }
             echo "</div>";
-            echo "<a class='btnRegresar' href='index.php'>Regresar</a>";
+            echo "<form action='index.php' class='regresar'>
+                <input type='submit' class='btn btn-info' value='Regresar' />
+            </form>";
         }
     }
 }

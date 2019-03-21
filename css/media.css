@@ -4,7 +4,7 @@ body{
 }
 .formulario{
     margin-top: 5em;
-    margin-left: 5em;
+    margin-left: 8em;
 }
 .botones{
     margin-top: 1em;
@@ -57,10 +57,11 @@ a {
     margin-bottom: 2em;
     
 }
-.indicenum,.botonExcel,.creaExcel,.btnRegresar{
+.indicenum,.botonExcel,.creaExcel,.regresar{
 
-    margin-left: 5em;
+    margin-left: 9em;
     margin-top: 2em;
+    margin-bottom: 2em;
 
 }
 
