@@ -31,13 +31,13 @@ function indexar() {
         $link = $user['link'];
         $ide = $user['id'];
         $descripcion=$user['descripcion'] . "..";
-        
+        $fecha=$user['fecha'];
 
         echo "<div class='col-xs-12 col-sm-12 col-md-3'>
         <a href='#' title='Lorem ipsum' class='thumbnail'><img src='http://lorempixel.com/250/140/people' alt='Lorem ipsum' /></a></div>
         <div class='col-xs-12 col-sm-12 col-md-2'>
         <ul class='meta-search'>
-            <li><i class='glyphicon glyphicon-calendar'></i> <span>02/15/2014</span></li>
+            <li><i class='glyphicon glyphicon-calendar'></i> <span>$fecha</span></li>
         </ul>
         </div> 
         <div class='col-xs-12 col-sm-12 col-md-7 excerpet'>
