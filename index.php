@@ -34,7 +34,7 @@ function indexar() {
         $fecha=$user['fecha'];
 
         echo "<div class='col-xs-12 col-sm-12 col-md-3'>
-        <a href='#' class='thumbnail'><img src='http://lorempixel.com/250/140/people' /></a></div>
+        <a href='#' title='Lorem ipsum' class='thumbnail'><img src='http://lorempixel.com/250/140/people' alt='Lorem ipsum' /></a></div>
         <div class='col-xs-12 col-sm-12 col-md-2'>
         <ul class='meta-search'>
             <li><i class='glyphicon glyphicon-calendar'></i> <span>$fecha</span></li>
@@ -60,7 +60,7 @@ function indexar() {
     $max_num_paginas = ceil($total_records / 10);
 
     for ($i = 0; $i < $max_num_paginas; $i++) {
-        echo '<a href="index.php?pg=' . ($i + 1) . '">' . ($i + 1) . '</a> | ';
+        echo '<a class="btn btn-primary" href="index.php?pg=' . ($i + 1) . '">' . ($i + 1) . '</a> | ';
     }
 
     echo "</div>";
@@ -127,7 +127,7 @@ function ordenarFecha(){
 
             <div class="row">
                 <div class="col-lg-12">
-                    <form  method="post" name="formu" id="formu" class="formulario"  action="busqueda.php" autocomplete="off" >
+                    <form  method="post" name="formu" id="formu" class="formulario"  action="busqueda.php" >
                         <h4>Ingresa tu busqueda:</h4>
                         <div class="form-group row">      
                             <div class="col-sm-5">
