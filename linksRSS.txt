@@ -1,4 +1,1 @@
-https://www.reforma.com/rss/portada.xml
-https://www.reforma.com/rss/ciudad.xml
-https://www.techrepublic.com/rssfeeds/articles/
-http://archivo.eluniversal.com.mx/rss/universalmxm.xml
+http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml

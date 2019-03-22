@@ -1,0 +1,7 @@
+﻿22 de marzo
+-Se implementó la parte de imagenes y autor
+-Deje un solo RSS-XML, que es el mas estable y que guarda autor e imagen
+-El sql esta actualizado, debes borrar tu tabla y usar el archivo.
+-Si quieres tener la BD actualizada, debes de truncar tu tabla y correr guardado.php 
+-Le cambie el nombre al que guarda los archivos, es guardado.php (el que esta en la raiz, no antiguo), en ese 
+guardas tus datos en la bd 

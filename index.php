@@ -32,9 +32,10 @@ function indexar() {
         $ide = $user['id'];
         $descripcion=$user['descripcion'] . "..";
         $fecha=$user['fecha'];
+        $imagen=$user['imagen'];
 
         echo "<div class='col-xs-12 col-sm-12 col-md-3'>
-        <a href='#' class='thumbnail'><img src='http://lorempixel.com/250/140/people' /></a></div>
+        <a href='#' class='thumbnail'><img src='$imagen' /></a></div>
         <div class='col-xs-12 col-sm-12 col-md-2'>
         <ul class='meta-search'>
             <li><i class='glyphicon glyphicon-calendar'></i> <span>$fecha</span></li>

@@ -27,18 +27,16 @@ function guardarArticulos(){
         //Obteniendo los artículos y guardandolos en la bases de datos
         for($i = 0; $i < $itemQty; $i++){
             $item = $feed->get_item($i);
-            
             $titulo = $item->get_title();
             $descripcion = $item->get_description();
-           $autor = $item->get_author()->get_name();
+            $autor = $item->get_author()->get_name();        
             $fecha = $item->get_date('Y-m-d');
             $linkArticulo = $item->get_link();
+            $imagen=$item->get_enclosure()->get_link();
             
-            echo $titulo;
-            echo "<br>";
-            
-            $sentencia = "INSERT INTO articulos (fuente, titulo, descripcion, autor, fecha, link) VALUES('$fuente','$titulo','$descripcion','$autor','$fecha','$linkArticulo')";
-            $conexion->query($sentencia);            
+        
+           $sentencia = "INSERT INTO articulos (fuente, titulo, descripcion, autor, fecha, link,imagen) VALUES('$fuente','$titulo','$descripcion','$autor','$fecha','$linkArticulo','$imagen')";
+           $conexion->query($sentencia);            
         } 
     }
     echo "<p>Guardado exitoso</p>";
@@ -80,7 +78,7 @@ function obtenerLinks(){
     <body>
         <h1 class="tituloIndex">Seleccione una opción</h1><br>
         <div class="botones">
-        <a href = "index.php?accion=guardar"><button>Guardar artículos en la BD</button></a><br><br>
+        <a href = "guardado.php?accion=guardar"><button>Guardar artículos en la BD</button></a><br><br>
         <a href = "index.php?accion=vaciar"><button>Borrar artículos en la BD</button></a><br><br>
         <a href = "buscador.php"><button>Realizar búsqueda</button></a>
        </div>
