@@ -34,7 +34,7 @@ function indexar() {
         $fecha=$user['fecha'];
 
         echo "<div class='col-xs-12 col-sm-12 col-md-3'>
-        <a href='#' title='Lorem ipsum' class='thumbnail'><img src='http://lorempixel.com/250/140/people' alt='Lorem ipsum' /></a></div>
+        <a href='#' class='thumbnail'><img src='http://lorempixel.com/250/140/people' /></a></div>
         <div class='col-xs-12 col-sm-12 col-md-2'>
         <ul class='meta-search'>
             <li><i class='glyphicon glyphicon-calendar'></i> <span>$fecha</span></li>
@@ -127,7 +127,7 @@ function ordenarFecha(){
 
             <div class="row">
                 <div class="col-lg-12">
-                    <form  method="post" name="formu" id="formu" class="formulario"  action="busqueda.php" >
+                    <form  method="post" name="formu" id="formu" class="formulario"  action="busqueda.php" autocomplete="off">
                         <h4>Ingresa tu busqueda:</h4>
                         <div class="form-group row">      
                             <div class="col-sm-5">
