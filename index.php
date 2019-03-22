@@ -33,6 +33,7 @@ function indexar() {
         $descripcion=$user['descripcion'] . "..";
         $fecha=$user['fecha'];
         $imagen=$user['imagen'];
+        $autor=$user['autor'];
 
         echo "<div class='col-xs-12 col-sm-12 col-md-3'>
         <a href='#' class='thumbnail'><img src='$imagen' /></a></div>
@@ -43,7 +44,8 @@ function indexar() {
         </div> 
         <div class='col-xs-12 col-sm-12 col-md-7 excerpet'>
 				<h3><a href='$link' title=''>$titulo</a></h3>
-				<p text-overflow: ellipsis;>$descripcion </p>						
+                <p text-overflow: ellipsis;>$descripcion </p>	
+                <p>Autor: $autor</p>					
                 <span class='plus'><input type='checkbox' class='seleccionados' value='$ide'></a></span>
         </div>
         <span class='clearfix borda'></span>";
