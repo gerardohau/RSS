@@ -69,49 +69,6 @@ function indexar() {
     echo "</div>";
 }
 
-function ordenarFecha(){
-    require_once('core/Conexion.php');
-    $con = new Conexion();
-    $conn = $con->get_conexion();
-    $sql = "SELECT *
-     FROM articulos";
-    $datos = $conn->query($sql);
-   
-   $meses=[
-       1=>"Enero",
-       2=>"Febrero",
-       3=>"Marzo",
-       4=>"Abril",
-       5=>"Mayo",
-       6=>"Junio",
-       7=>"Julio",
-       8=>"Agosto",
-       9=>"Septiembre",
-       "Octubre",
-       "Noviembre",
-       "Diciembre"];
-
-
-    while ($user = mysqli_fetch_array($datos)) {
-
-        $titulo = " " . $user['titulo'];
-        $link = $user['link'];
-        $ide = $user['id'];
-        $fecha=$user['fecha'];
-        
-        $datosFecha = explode("-", $fecha);
-        
-        echo "<nav><ul>" . 
-        
-        
-        
-        
-        "</ul></nav>";
-
-
-        //echo "<input type='checkbox' class='seleccionados' value='$ide'>" . "<a class='links' href='$link'>$titulo</a>" . "<h1>" . $datosFecha[0] . "</h1>" ."<br>";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -122,10 +79,16 @@ function ordenarFecha(){
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <title>Feed</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+		<title>Feed</title>
+		
     </head>
     <body>
-
+     <?php
+	  include('navbar.html');
+	 ?>
         <div class="container-fluid">
 
             <div class="row">
@@ -187,7 +150,6 @@ indexar();
         window.open("crearExcel.php?indices="+indices,'_blank' );
         
     }
-    
     function mostrarSugerencias(str) {
         if (str.length === 0) {
             document.getElementById("mostrar-sugerencias").innerHTML = "";
@@ -212,6 +174,9 @@ indexar();
         document.getElementById("search").value = str;
         document.getElementById("mostrar-sugerencias").innerHTML = "";
     }
+
+
+  
 
 
 </script>

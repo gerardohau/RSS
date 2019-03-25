@@ -5,3 +5,8 @@
 -Si quieres tener la BD actualizada, debes de truncar tu tabla y correr guardado.php 
 -Le cambie el nombre al que guarda los archivos, es guardado.php (el que esta en la raiz, no antiguo), en ese 
 guardas tus datos en la bd 
+
+25 de marzo
+-Implementado el submenu
+
+OJO: Corregir el codigo de la creación del excel y mostrar sugerencias ya que no permite usar AJAX
